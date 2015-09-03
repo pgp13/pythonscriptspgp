@@ -1,0 +1,34 @@
+import os 
+import system
+f=open("/var/www/refrshwholepage.php",'w')
+f.write("")
+f.close()
+
+opc_server = "Ignition OPC-UA Server"
+
+plc = "[MicroLogix_3]"
+
+PlcWantsToClear = "[MicroLogix_3]B3:2/14"
+HMICleared = "[MicroLogix_3]B3:2/15"
+
+PlcWantsToClearBit = system.opc.readValue(opc_server, PlcWantsToClear).value
+HMIClearedBit = system.opc.readValue(opc_server, HMICleared).value
+
+if PlcWantsToClearBit == 1:
+ folder = '/var/www/Flavor'
+ for the_file in os.listdir(folder):
+    file_path = os.path.join(folder, the_file)
+    try:
+        if os.path.isfile(file_path):
+            os.unlink(file_path)
+    except Exception, e:
+        print e
+    system.opc.writeValue("Ignition OPC-UA Server", HMICleared, 1)
+    import os
+    f=open("/var/www/refrshwholepage.php",'w')
+    f.write("<script>window.location.reload();</script>")
+    #f.write(" Minutes")
+    f.close()
+    
+    
+    
