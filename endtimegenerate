@@ -1,0 +1,472 @@
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 0
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 10
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+#etime = system.opc.readValue(opc_server, hour).value
+#etime = str(etime)
+
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)
+#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 20
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 30
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 40
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 50
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 60
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 70
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
+import system
+import os
+opc_server = "Ignition OPC-UA Server"
+plc = "[MicroLogix_3]"
+name1 = "[MicroLogix_3]N7:17"
+point = 80
+#point = 60
+point1 = point + 1
+point2 = point + 2
+print(point1)
+
+nametemp = "[MicroLogix_3]N102:"
+namec = []
+namec.append(nametemp)
+namec.append(str(point1))
+name = "".join(namec)
+namec = []
+namec.append(nametemp)
+namec.append(str(point2))
+name2 = "".join(namec)
+print(name)
+hour = name
+minutes = name2
+etime = system.opc.readValue(opc_server, hour).value
+etime = str(etime -1)
+#etime = str(system.opc.readValue(opc_server, hour).value)#etime = "10"
+etime1 = str(system.opc.readValue(opc_server, minutes).value)
+#etime1 = "5"
+col3 = []
+col3.append(etime)
+col3.append(':')
+print(etime1)
+if int(etime1) < 10:
+  print(etime1)
+  col4 =[]
+  col4.append("0")
+  col4.append(etime1)
+  col4_0="".join(col4)
+  etime1 = col4_0 
+col3.append(etime1)
+col3_0 = "".join(col3)
+fn = []
+fn.append("/var/www/Flavor/Flavor")
+fn.append(str(point))
+fn.append("End.php")
+fnf = "".join(fn)
+f=open(fnf,'w')
+if col3_0 == "-1:00":
+ col3_0 = ""
+f.write(col3_0)
+f.close()
+print(fnf)
